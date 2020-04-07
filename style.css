@@ -5,7 +5,7 @@ body, div, h1, p {
 
 .body {
     width: 100%;
-    background-color: palegreen;
+    background-color: #A09470;
 }
 
 .wrapper {
@@ -15,6 +15,13 @@ body, div, h1, p {
     flex-direction: column;
     align-content: center;
     align-items: center;
+
+    font-family: "Bitstream Charter", sans-serif;
+}
+
+.wrapper #text {
+    width: 72%;
+    margin: 20px 0;
 }
 
 .content {
@@ -26,15 +33,15 @@ body, div, h1, p {
 }
 
 .content__title {
-    margin-bottom: 40px;
-    color: rebeccapurple;
-    text-shadow: black;
-    font-size: 3.4rem;
+    margin-bottom: 0;
+    color: #EB6637;
+    text-shadow: 0 0 3px #000000;
+    font-size: 3rem;
 }
 
 .content__result-area {
-    width: 50%;
-    height: 25vh;
+    width: 30%;
+    height: 40vh;
     margin-bottom: 20px;
     padding: 5px;
 
@@ -42,45 +49,84 @@ body, div, h1, p {
     outline: none;
     border: 1px solid #000000;
     border-radius: 5px;
+    box-shadow: 0 0 10px 1px #000000;
 
-    background-color: #000000;
-    opacity: 0.6;
-    color: #ffffff;
-    /*box-shadow: 0 0 5px 2px #000000;*/
+    color: #EB6637;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: #ffffff;
+
+    background-color: #A09470;
+    background-image: url("./assets/alexey-malakhov-BlHBR83YM-I-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.content__result-area::placeholder {
+    color: #EB6637;
 }
 
 .content__keyboard {
-    display: flex;
-    width: 82%;
+    width: 91%;
     margin-bottom: 15px;
-    padding: 5px;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding-top: 3px;
 
-    border: 1px solid #000000;
+    box-shadow: 0 0 10px 1px #000000;
     border-radius: 5px;
+    background-color: #A09470;
+    background-image: url("./assets/andrew-buchanan-fvEuFo71rkI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 
-    background-color: #2B663D;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.clear-fix {
-    width: 100%;
-    clear: both;
+.content__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.Delete,
+.Backspace,
+.Tab,
+.CapsLock,
+.Enter,
+.ShiftLeft,
+.ShiftRight,
+.Space {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+}
+
+.content__row .accent {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0075B5), to(#A09470));
+    font-size: 1.4rem;
 }
 
 .content__key {
-    display: block;
     width: 50px;
     height: 50px;
-    margin: 3px;
-    padding: 3px;
+    margin-left: 5px;
+    padding: 3px 0 0 5px;
 
     border: 1px solid #000000;
     border-radius: 5px;
-    background-color: rebeccapurple;
+    background-color: #A09470;
     color: #ffffff;
     font-size: 1.7em;
-    opacity: 0.8;
+    font-weight: 400;
+    text-align: left;
+    cursor: pointer;
+    -webkit-transition: border-radius 0.3s;
+    transition: border-radius 0.3s;
+    opacity: 0.6;
 }
 
 .content__key:hover {
@@ -88,23 +134,25 @@ body, div, h1, p {
     opacity: 1;
 }
 
-.content__key:focus {
-
+.animate {
+    /*border-radius: 50%;*/
+    transform: scale(1.1);
+    opacity: 1;
 }
 
-.content__key:active {
-
+.capslock_on {
+    box-shadow: inset 0 0 3px 3px #EB6637;
 }
 
-.content__key_active {
-    background-color: #ffffff;
-    color: #000000;
+.content__keyboard .shift {
+    display: block;
 }
 
-.content__key_theme_dark {
-
+.content__keyboard .Space span {
+    width: 100%;
+    height: 100%;
 }
 
-.content__set {
-
+.content__keyboard .hide {
+    display: none;
 }
