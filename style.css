@@ -1,0 +1,158 @@
+body, div, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    width: 100%;
+    background-color: #A09470;
+}
+
+.wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    font-family: "Bitstream Charter", sans-serif;
+}
+
+.wrapper #text {
+    width: 72%;
+    margin: 20px 0;
+}
+
+.content {
+    width: 100%;
+    padding: 30px 40px 30px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content__title {
+    margin-bottom: 0;
+    color: #EB6637;
+    text-shadow: 0 0 3px #000000;
+    font-size: 3rem;
+}
+
+.content__result-area {
+    width: 30%;
+    height: 40vh;
+    margin-bottom: 20px;
+    padding: 5px;
+
+    resize: none;
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px #000000;
+
+    color: #EB6637;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: #ffffff;
+
+    background-color: #A09470;
+    background-image: url("./assets/alexey-malakhov-BlHBR83YM-I-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.content__result-area::placeholder {
+    color: #EB6637;
+}
+
+.content__keyboard {
+    width: 91%;
+    margin-bottom: 15px;
+    padding-top: 3px;
+
+    box-shadow: 0 0 10px 1px #000000;
+    border-radius: 5px;
+    background-color: #A09470;
+    background-image: url("./assets/andrew-buchanan-fvEuFo71rkI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.content__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.Delete,
+.Backspace,
+.Tab,
+.CapsLock,
+.Enter,
+.ShiftLeft,
+.ShiftRight,
+.Space {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+}
+
+.content__row .accent {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0075B5), to(#A09470));
+    font-size: 1.4rem;
+}
+
+.content__key {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    padding: 3px 0 0 5px;
+
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #A09470;
+    color: #ffffff;
+    font-size: 1.7em;
+    font-weight: 400;
+    text-align: left;
+    cursor: pointer;
+    -webkit-transition: border-radius 0.3s;
+    transition: border-radius 0.3s;
+    opacity: 0.6;
+}
+
+.content__key:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.animate {
+    /*border-radius: 50%;*/
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.capslock_on {
+    box-shadow: inset 0 0 3px 3px #EB6637;
+}
+
+.content__keyboard .shift {
+    display: block;
+}
+
+.content__keyboard .Space span {
+    width: 100%;
+    height: 100%;
+}
+
+.content__keyboard .hide {
+    display: none;
+}
